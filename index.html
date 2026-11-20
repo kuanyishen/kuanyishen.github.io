@@ -1,143 +1,112 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Kuanyi Shen Data Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sky Shen · Data Scientist</title>
+<meta name="description" content="Sky Shen, data scientist in New York: A/B testing, prediction models, conversion-rate optimization and LLM agents. Five end-to-end portfolio projects.">
+<meta property="og:title" content="Sky Shen · Data Scientist">
+<meta property="og:description" content="A/B testing, prediction, CRO and LLM agents. Five end-to-end projects with honest evaluation.">
+<meta property="og:image" content="https://kuanyishen.github.io/img/sky.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#projects">Skip to projects</a>
+<div class="layout">
 
-	</head>
-	<body class="is-preload">
+  <aside class="profile" aria-label="Profile">
+    <img class="photo" src="img/sky.jpg" alt="Portrait of Sky Shen" width="128" height="128">
+    <div>
+      <h1>Sky Shen</h1>
+      <p class="role">Data Scientist</p>
+      <p class="where">New York City · open to remote</p>
+    </div>
+    <p class="bio">Four years in A/B testing, prediction models, conversion-rate optimization and LLM agents. I care about whether the answer is right, not just whether the model is fancy.</p>
+    <div class="links">
+      <a class="btn primary" href="https://www.linkedin.com/in/sky-s-170a75179/">LinkedIn</a>
+      <a class="btn" href="https://github.com/kuanyishen">GitHub</a>
+      <a class="btn" href="mailto:ks3957@columbia.edu">ks3957@columbia.edu</a>
+      <!-- Resume button: add once resume.pdf is in the repo
+      <a class="btn" href="resume.pdf">Resume (PDF)</a> -->
+    </div>
+    <div>
+      <p class="label">Skills</p>
+      <ul class="chips">
+        <li>A/B testing</li><li>CUPED</li><li>Uplift modelling</li><li>Forecasting</li><li>XGBoost</li><li>SHAP</li>
+        <li>RAG</li><li>LLM evaluation</li><li>Python</li><li>SQL</li><li>dbt</li><li>FastAPI</li><li>Docker</li>
+      </ul>
+    </div>
+  </aside>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <main>
+    <header class="intro">
+      <h2>I turn business questions into decisions you can trust.</h2>
+      <p>Each project below is written up the way I'd present it to a team: the business question, the data, the method, the result, and what I'd still worry about.</p>
+    </header>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1> Kuanyi Shen<br />
-						Data Projects</h1>
-						<p> Hi! I'm Sky, a MPA student specialized in Data Analytics at Columbia University. 
-							<br> Here you can find my data projects using Python, SQL and Tableau. </p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+      <div class="projects">
 
+        <article class="project">
+          <div class="project-head"><h3>Question answering over 10-K filings</h3><span class="tag">RAG · LLM evaluation</span></div>
+          <p class="question">Can you trust an AI assistant's answers about a company's annual report, and how would you know?</p>
+          <p class="result"><b>Result:</b> 93.5% of numeric and 97.5% of text answers correct, all 30 unanswerable questions declined. Retrieval choices mattered more than the model, and the LLM judge was tested before its scores were used.</p>
+          <p class="stack">Claude · Gemini embeddings · BM25 · SEC EDGAR · GitHub Actions</p>
+          <div class="project-links"><a href="https://kuanyishen.github.io/sec-10k-rag-eval/">Case study</a><a href="https://github.com/kuanyishen/sec-10k-rag-eval">Code</a></div>
+        </article>
 
-				<!-- Main -->
-					<div id="main">
+        <article class="project">
+          <div class="project-head"><h3>Olist customer value</h3><span class="tag">Churn · ML in production</span></div>
+          <p class="question">Which first-time customers will buy again, and is a machine-learning model worth it?</p>
+          <p class="result"><b>Result:</b> The top 10% of scores hold 2.1x the repeat buyers of a random 10%. XGBoost did not beat a four-variable logistic regression, and the write-up says so.</p>
+          <p class="stack">dbt · DuckDB · XGBoost · SHAP · FastAPI · Docker</p>
+          <div class="project-links"><a href="https://kuanyishen.github.io/olist-customer-value/">Case study</a><a href="https://github.com/kuanyishen/olist-customer-value">Code</a></div>
+        </article>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/kuanyishen/Data-Analyst-Portfolio-Project-Repository/blob/main/CovidProject.sql"> Data Exploration <br/>
-										in SQL</a></h2>
-									</header>
-									
-									
-									<a href="#" class="image fit"> <img src="images/pic02.jpg" alt="" 
-										width="400" 
-										height="300" /></a>
-							
+        <article class="project">
+          <div class="project-head"><h3>NYC ridership forecasting</h3><span class="tag">Forecasting · MLOps</span></div>
+          <p class="question">Can we forecast transit ridership two weeks out, and know when to stop trusting the forecast?</p>
+          <p class="result"><b>Result:</b> A weekly-retrained Prophet + XGBoost ensemble with calibrated intervals and a drift monitor. Weather data shows the winter snowstorms behind its alarms.</p>
+          <p class="stack">XGBoost · Prophet · MLflow · GitHub Actions</p>
+          <div class="project-links"><a href="https://kuanyishen.github.io/nyc-ridership-forecasting/">Case study</a><a href="https://github.com/kuanyishen/nyc-ridership-forecasting">Code</a></div>
+        </article>
 
-									<p>Analyze Covid data of different countries.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/kuanyishen/Data-Analyst-Portfolio-Project-Repository/blob/main/CovidProject.sql" class="button">View Project</a></li>
-									</ul>
-								</article>
+        <article class="project">
+          <div class="project-head"><h3>AI brand visibility tracker</h3><span class="tag">LLM measurement</span></div>
+          <p class="question">How often do AI assistants mention Aritzia when shoppers ask for recommendations?</p>
+          <p class="result"><b>Result:</b> Repeatable tracking across Claude and Gemini, with run-to-run stability measured before any brand comparison.</p>
+          <p class="stack">Claude API · Gemini API · Python · GitHub Actions</p>
+          <div class="project-links"><a href="https://kuanyishen.github.io/ai-brand-visibility-tracker/">Case study</a><a href="https://github.com/kuanyishen/ai-brand-visibility-tracker">Code</a></div>
+        </article>
 
-								<article>
-									<header>
+        <article class="project">
+          <div class="project-head"><h3>Experimentation toolkit</h3><span class="tag">A/B testing · Causal inference</span></div>
+          <p class="question">How big a test do we need, and who actually responds to a promotion?</p>
+          <p class="result"><b>Result:</b> A power and sample-size calculator, CUPED variance reduction and uplift models, worked through on the Hillstrom and Criteo datasets.</p>
+          <p class="stack">Python · statsmodels · scikit-learn</p>
+          <div class="project-links"><a href="https://kuanyishen.github.io/experimentation-toolkit/">Case study</a><a href="https://github.com/kuanyishen/experimentation-toolkit">Code</a></div>
+        </article>
 
-										<h2><a href="https://public.tableau.com/app/profile/kuanyi.shen"> Data Visualization<br />
-										in Tableau</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" width="400" 
-										height="300"/></a>
-									<p>Visualize the Covid data I explored in SQL.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/kuanyi.shen" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/kuanyishen/Data-Analyst-Portfolio-Project-Repository/blob/main/Customer%20Churn%20Prediction%20Model.ipynb">Data Prediction<br />
-										in Python</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" width="400" 
-										height="300"/></a>
-									<p>Use logistic regression to predict whether a customer will leave the membership.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/kuanyishen/Data-Analyst-Portfolio-Project-Repository/blob/main/Customer%20Churn%20Prediction%20Model.ipynb" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-							
-										<h2><a href="https://github.com/kuanyishen/Data-Analyst-Portfolio-Project-Repository/blob/main/Movie_Revenue_Project.ipynb">Data Correlation<br />
-										In Python</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" width="400" 
-										height="300"/></a>
-									<p>Explore which factors have high correlation with movies' gross revenue.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/kuanyishen/Data-Analyst-Portfolio-Project-Repository/blob/main/Movie_Revenue_Project.ipynb" class="button">View Porject</a></li>
-									</ul>
-								</article>
-								
-							</section>
+      </div>
+    </section>
 
-						
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <div class="about">
+        <p>I'm a data scientist with four years of experience across experimentation, prediction and growth. I've designed and analysed A/B tests, built forecasting and churn models, run conversion-rate optimization programs, and more recently built and evaluated LLM agents.</p>
+        <p>What I care about most is the "how would we know?" part: honest baselines, confidence intervals, and saying so plainly when the fancy model doesn't win.</p>
+        <p>I'm based in New York and open to remote, looking for data scientist roles.</p>
+      </div>
+    </section>
 
-					</div>
+    <!-- Experience section: to be filled from the resume -->
 
-				<!-- Footer -->
-					<footer id="footer">
-					
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>School of International and Public Affairs<br />
-								Columbia University, New York, 10027</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">917 250 6154</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">ks3957@columbia.edu</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.instagram.com/skyshen0912/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/kuanyishen" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <footer>Sky Shen · <a href="mailto:ks3957@columbia.edu">ks3957@columbia.edu</a> · <a href="https://www.linkedin.com/in/sky-s-170a75179/">LinkedIn</a> · <a href="https://github.com/kuanyishen">GitHub</a></footer>
+  </main>
+</div>
+</body>
 </html>
